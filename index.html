@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>صفحتي الشخصية</title>
+  <style>
+    body {
+      font-family: 'Tahoma', sans-serif;
+      margin: 0;
+      padding: 0;
+      background-color: #f4f4f4;
+      scroll-behavior: smooth;
+    }
+
+    header {
+      background-color: #333;
+      color: white;
+      padding: 30px;
+      text-align: center;
+    }
+
+    nav {
+      background-color: #444;
+      position: sticky;
+      top: 0;
+      z-index: 1000;
+    }
+
+    nav a {
+      float: right;
+      display: block;
+      color: white;
+      padding: 14px 20px;
+      text-decoration: none;
+    }
+
+    nav a:hover {
+      background-color: #111;
+    }
+
+    section {
+      padding: 50px 20px;
+      min-height: 100vh;
+      opacity: 0;
+      transform: translateY(20px);
+      transition: all 0.6s ease-in-out;
+    }
+
+    section.active {
+      opacity: 1;
+      transform: translateY(0);
+    }
+
+    footer {
+      background-color: #333;
+      color: white;
+      text-align: center;
+      padding: 20px;
+    }
+
+    form {
+      max-width: 500px;
+      margin: auto;
+    }
+
+    input, textarea {
+      width: 100%;
+      padding: 10px;
+      margin: 10px 0;
+      border: 1px solid #ccc;
+      border-radius: 4px;
+    }
+
+    button {
+      background-color: #333;
+      color: white;
+      border: none;
+      padding: 10px 20px;
+      cursor: pointer;
+    }
+
+    button:hover {
+      background-color: #555;
+    }
+  </style>
+</head>
+<body>
+
+<header>
+  <h1>مرحباً بكم في صفحتي الشخصية</h1>
+</header>
+
+<nav>
+  <a href="#contact">تواصل معنا</a>
+  <a href="#best">الأفضل</a>
+  <a href="#services">الخدمات</a>
+  <a href="#products">المنتجات</a>
+  <a href="#about">من نحن</a>
+  <a href="#home">الرئيسية</a>
+</nav>
+
+<section id="home">
+  <h2>الرئيسية</h2>
+  <p>أهلاً بك في موقعي الشخصي. هنا تجد كل ما يتعلق بي وبما أقدمه.</p>
+</section>
+
+<section id="about">
+  <h2>من نحن</h2>
+  <p>أنا شخص مهتم بمجال معين. لدي خبرة طويلة وأسعى لتقديم أفضل الخدمات لعملائي.</p>
+</section>
+
+<section id="products">
+  <h2>المنتجات</h2>
+  <p>مجموعة من المنتجات المميزة التي أقدمها للعملاء والجمهور المهتم.</p>
+</section>
+
+<section id="services">
+  <h2>الخدمات</h2>
+  <p>أقدم العديد من الخدمات مثل التصميم، التطوير، الاستشارات التقنية، والدعم الفني.</p>
+</section>
+
+<section id="best">
+  <h2>الأفضل</h2>
+  <p>هذه أفضل إنجازاتي أو المنتجات المميزة التي أنصح بها.</p>
+</section>
+
+<section id="contact">
+  <h2>تواصل معنا</h2>
+  <form action="https://formspree.io/f/YOUR_FORM_ID" method="POST">
+    <input type="text" name="name" placeholder="الاسم" required />
+    <input type="email" name="email" placeholder="البريد الإلكتروني" required />
+    <textarea name="message" placeholder="رسالتك" rows="5" required></textarea>
+    <button type="submit">إرسال</button>
+  </form>
+</section>
+
+<footer>
+  <p>جميع الحقوق محفوظة &copy; 2025</p>
+</footer>
+
+<script>
+  // تفعيل الحركة عند التمرير
+  const sections = document.querySelectorAll("section");
+  const observer = new IntersectionObserver(entries => {
+    entries.forEach(entry => {
+      if (entry.isIntersecting) {
+        entry.target.classList.add("active");
+      }
+    });
+  }, {
+    threshold: 0.2
+  });
+
+  sections.forEach(section => {
+    observer.observe(section);
+  });
+</script>
+
+</body>
+</html>
