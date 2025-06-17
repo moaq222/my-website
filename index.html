@@ -45,11 +45,36 @@
       opacity: 0;
       transform: translateY(20px);
       transition: all 0.6s ease-in-out;
+      background-color: white;
+      margin: 20px auto;
+      max-width: 800px;
+      box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+      border-radius: 8px;
     }
 
     section.active {
       opacity: 1;
       transform: translateY(0);
+    }
+
+    h2 {
+      margin-top: 0;
+      text-align: center;
+      color: #333;
+    }
+
+    .resume-table {
+      width: 100%;
+      border-collapse: collapse;
+      margin-top: 20px;
+    }
+    .resume-table th, .resume-table td {
+      border: 1px solid #ccc;
+      padding: 8px;
+      text-align: right;
+    }
+    .resume-table th {
+      background-color: #f0f0f0;
     }
 
     footer {
@@ -97,12 +122,51 @@
   <a href="#services">الخدمات</a>
   <a href="#products">المنتجات</a>
   <a href="#about">من نحن</a>
+  <a href="#resume">سيرتي الذاتية</a>
   <a href="#home">الرئيسية</a>
 </nav>
 
 <section id="home">
   <h2>الرئيسية</h2>
   <p>أهلاً بك في موقعي الشخصي. هنا تجد كل ما يتعلق بي وبما أقدمه.</p>
+</section>
+
+<section id="resume">
+  <h2>سيرتي الذاتية</h2>
+  <table class="resume-table">
+    <tr><th>الاسم</th><td>Moayad Hael Saif Abdulmalek</td></tr>
+    <tr><th>تاريخ الميلاد</th><td>4 فبراير 1999</td></tr>
+    <tr><th>العنوان</th><td>تعز، اليمن</td></tr>
+    <tr><th>الهاتف</th><td>+967714173621</td></tr>
+    <tr><th>البريد الإلكتروني</th><td><a href="mailto:moaiad20233@gmail.com">moaiad20233@gmail.com</a></td></tr>
+    <tr><th>الملخص</th><td>مهندس اتصالات وحاسوب متخصص في تحليل أمن الشبكات واختبار الاختراق، وخبرة في تطبيق التعلم الآلي في الاتصالات.</td></tr>
+  </table>
+
+  <h3>المهارات</h3>
+  <ul>
+    <li>تحليل واختبار اختراق الشبكات اللاسلكية</li>
+    <li>تطبيقات التعلم الآلي في الاتصالات</li>
+    <li>البرمجة وتحليل البيانات</li>
+    <li>التفكير النقدي وحل المشكلات</li>
+    <li>العمل تحت الضغط والتكيف السريع</li>
+    <li>التواصل والعمل الجماعي</li>
+  </ul>
+
+  <h3>المؤهلات العلمية</h3>
+  <ul>
+    <li>شهادة الثانوية العامة من مدرسة أبو ذر الغفاري - تعز (2016-2017) بمعدل ممتاز</li>
+    <li>طالب قسم هندسة الاتصالات والحاسوب - جامعة تعز</li>
+  </ul>
+
+  <h3>الشهادات والدورات</h3>
+  <ul>
+    <li>دورة اللغة الإنجليزية (المستوى 2) من معهد الكندي - درجة 94%</li>
+    <li>دورة أساسيات نظام التشغيل Windows - درجة 97%</li>
+    <li>شهادة أساسيات الذكاء الاصطناعي</li>
+    <li>شهادة ورشة عمل هندسة الاتصالات المتكاملة</li>
+    <li>شهادات تقدير للأداء المتميز في مواد العلوم والأحياء والرياضيات</li>
+  </ul>
+
 </section>
 
 <section id="about">
